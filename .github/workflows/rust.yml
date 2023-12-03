@@ -2,13 +2,13 @@ name: Rust
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main00" ]
   pull_request:
     branches: [ "main00" ]
 
 env:
   CARGO_TERM_COLOR: always
-  SHUTTLE_API: ${{ secrets.SHUTTLE_API_KEY }}
+  #SHUTTLE_API: 
 
 jobs:
   build:
@@ -22,4 +22,4 @@ jobs:
     - name: install shuttle
       run: cargo install cargo-shuttle
     - name: Run Check Create Project
-      run: cargo  shuttle init cch23-smile921 --create-env --name cch23-smiles --template axum 
+      run: cargo  shuttle init cch23-smile921 --create-env --name cch23-smiles --template axum --api-key ${{ secrets.SHUTTLE_API_KEY }}
