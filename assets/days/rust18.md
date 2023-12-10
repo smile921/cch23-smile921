@@ -1,0 +1,1 @@
+Challenge 18 not released yet! Come back in 8d 5h 35m 11s.
