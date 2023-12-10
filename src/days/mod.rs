@@ -7,6 +7,7 @@ mod day14;
 mod day15;
 mod day18;
 mod day19;
+mod day2;
 mod day20;
 mod day21;
 mod day22;
@@ -20,6 +21,7 @@ pub fn router() -> axum::Router {
     axum::Router::new()
         .nest("/", day0::router())
         .nest("/", day1::router())
+        .nest("/", day2::router())
         // Days 2 and 3 are omitted due to being weekends
         .nest("/", day4::router())
         .nest("/", day5::router())
