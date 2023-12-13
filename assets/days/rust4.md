@@ -8,7 +8,7 @@ The task is to create a POST endpoint `/4/strength` that calculates the combined
 
 The input to the endpoint is a JSON array containing information about each reindeer. Each reindeer is represented as an object with two attributes: `"name"` (string) and `"strength"` (integer). Collect the strength of each reindeer and respond with the sum.
 
-### 🔔 Tips
+### 🔔 Tips 
 
 - [serde](https://docs.rs/serde/latest/serde/)
 - [serde_json](https://docs.rs/serde_json/latest/serde_json/)
