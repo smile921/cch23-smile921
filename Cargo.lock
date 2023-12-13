@@ -264,6 +264,7 @@ dependencies = [
  "axum 0.7.1",
  "html2md",
  "reqwest",
+ "serde",
  "shuttle-axum",
  "shuttle-runtime",
  "tokio",
