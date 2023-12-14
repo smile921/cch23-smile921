@@ -265,6 +265,7 @@ dependencies = [
  "html2md",
  "reqwest",
  "serde",
+ "serde_json",
  "shuttle-axum",
  "shuttle-runtime",
  "tokio",
