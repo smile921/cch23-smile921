@@ -35,51 +35,34 @@ struct ResultResp {
 impl ResultResp {
     fn new(deer1: Vec<Reindeer2>) -> ResultResp {
         let deer = deer1.as_slice();
-        let f_speed = |a: &Reindeer2, b: &Reindeer2| {
-            if a.speed > b.speed {
-                a
-            } else {
-                b
-            }
-        };
         let fastest_deer = deer
             .into_iter()
             .map(|reinder| reinder)
-            .reduce(f_speed)
+            .reduce(|a, b| if a.speed > b.speed { a } else { b })
             .unwrap();
-        let f_tall = |a: &Reindeer2, b: &Reindeer2| {
-            if a.height > b.height {
-                a
-            } else {
-                b
-            }
-        };
-        let tallest_deer = deer.into_iter().map(|a| a).reduce(f_tall).unwrap();
 
-        let f_magic = |a: &Reindeer2, b: &Reindeer2| {
-            if a.snow_magic_power > b.snow_magic_power {
-                a
-            } else {
-                b
-            }
-        };
+        let tallest_deer = deer
+            .into_iter()
+            .map(|a| a)
+            .reduce(|a, b| if a.height > b.height { a } else { b })
+            .unwrap();
+
         let magician_deer = deer
             .into_iter()
             .map(|reinder| reinder)
-            .reduce(f_magic)
+            .reduce(|a, b| {
+                if a.snow_magic_power > b.snow_magic_power {
+                    a
+                } else {
+                    b
+                }
+            })
             .unwrap();
 
-        let f_consume = |a: &Reindeer2, b: &Reindeer2| {
-            if a.consume > b.consume {
-                a
-            } else {
-                b
-            }
-        };
         let consume_deer = deer
             .into_iter()
             .map(|reinder| reinder)
-            .reduce(f_consume)
+            .reduce(|a, b| if a.consume > b.consume { a } else { b })
             .unwrap();
         let fastest = format!(
             "Speeding past the finish line with a strength of {} is {}",
