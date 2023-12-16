@@ -5,16 +5,18 @@ use axum::{Json, Router};
 use serde::Serialize;
 #[derive(Debug, Serialize)]
 pub struct ResultRet {
-    elf: isize,
+    elf: usize,
 }
 
 pub fn router() -> Router {
     Router::new().route("/6", routing::post(task_one))
 }
 
-pub async fn task_one( _payload: String ) -> impl IntoResponse {
+pub async fn task_one( payload: String ) -> impl IntoResponse {
+    let key = "elf";
     
-    let ret = ResultRet { elf: 1 };
+    let cnt = payload.as_str().split(key).count()-1;
+    let ret = ResultRet { elf: cnt };
 
     (StatusCode::OK, serde_json::to_string(&ret).unwrap()).into_response()
 }

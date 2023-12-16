@@ -11,7 +11,7 @@ Create an endpoint `/6` that takes a POST request with a raw string as input and
 
 The output should be a JSON object containing the count of the string `"elf"`.
 
-### 🔔 Tips
+### 🔔 Tips 
 
 - [Rust Primitive Type str](https://doc.rust-lang.org/std/primitive.str.html)
 - [Rust String struct](https://doc.rust-lang.org/std/string/struct.String.html)
