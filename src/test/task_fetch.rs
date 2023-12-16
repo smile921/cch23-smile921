@@ -70,13 +70,11 @@ fn task_fetch_question_description() {
     fs::write(output, body.as_bytes()).unwrap();
 }
 
-
 #[test]
-fn split_test(){
-    let key ="elf";
+fn split_test() {
+    let key = "elf";
     let spls = "I have some elf ,and these elfs are very cute".split(key);
-    let cnt =spls.count();
-    assert_eq!(cnt,3);
+    let cnt = spls.count();
+    assert_eq!(cnt, 3);
     // spls.iter();
-    
 }
