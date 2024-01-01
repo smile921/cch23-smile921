@@ -102,7 +102,7 @@ Update the endpoint from Task 2 so that any set of ingredients can be present in
 The number of cookies in the answer will always be finite.
 
 ### 💠 Example
-
+ 
 ```text
 curl http://localhost:8000/7/bake \
   -H 'Cookie: recipe=eyJyZWNpcGUiOnsic2xpbWUiOjl9LCJwYW50cnkiOnsiY29iYmxlc3RvbmUiOjY0LCJzdGljayI6IDR9fQ=='

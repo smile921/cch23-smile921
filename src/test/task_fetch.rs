@@ -53,12 +53,14 @@ fn task_fetch_question() {
 // */
 #[test]
 fn task_fetch_question_description() {
-    let day = "-1";
+    let day = "5";
     let url = format!("https://console.shuttle.rs/api/cch/description/{}", day);
     let output = format!("assets/days/rust{}.md", day);
     assert_eq!("-1", "-1");
     let mut headers = header::HeaderMap::new();
-
+    headers.insert("authority", header::HeaderValue::from_static("console.shuttle.rs"));
+    headers.insert("cookie", header::HeaderValue::from_static("")); 
+   
     let client = reqwest::blocking::Client::builder()
         .default_headers(headers)
         .build()

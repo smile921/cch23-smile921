@@ -1,1 +1,0 @@
-Failed to get challenge release time
