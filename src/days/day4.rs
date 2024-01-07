@@ -103,7 +103,7 @@ pub fn router1() -> axum::Router {
 pub fn router2() -> axum::Router {
     axum::Router::new().route("/4/contest", axum::routing::post(day_four_task2))
 }
-
+  
 async fn day_four(Json(payload): Json<Vec<Reindeer>>) -> impl IntoResponse {
     let sum = payload
         .into_iter()
@@ -120,5 +120,5 @@ async fn day_four_task2(Json(payload): Json<Vec<Reindeer2>>) -> impl IntoRespons
         axum::http::StatusCode::OK,
         serde_json::to_string(&result).unwrap(),
     )
-        .into_response()
+        .into_response() 
 }

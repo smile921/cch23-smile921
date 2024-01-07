@@ -16,7 +16,7 @@ Then, return the sub-slice of the list between index `offset` and `offset + limi
 - [Query strings in Actix Web](https://actix.rs/docs/extractors/)
 - [Query strings in Rocket](https://rocket.rs/v0.5/guide/requests/#query-strings)
 
-### 💠 Example
+### 💠 Example 
 
 ```bash
 curl -X POST "http://localhost:8000/5?offset=3&limit=5" \
