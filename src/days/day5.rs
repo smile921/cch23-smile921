@@ -3,8 +3,8 @@ use serde::Deserialize;
 
 #[derive(Deserialize)]
 struct Pagination {
-   pub offset: usize,
-   pub limit: usize,
+    offset: usize,
+    limit: usize,
 }
 
 pub fn router() -> axum::Router {

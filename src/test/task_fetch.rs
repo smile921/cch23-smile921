@@ -13,6 +13,7 @@ fn it_works() {
 }
 
 // #[test]
+#[allow(unused)]
 fn task_fetch_question() {
     let day = "-1";
     let url = format!("https://console.shuttle.rs/cch/challenge/{}", day);
